@@ -1,0 +1,17 @@
+{
+  "name": "nodejs-console-app1",
+  "version": "0.0.0",
+  "description": "NodejsConsoleApp1",
+  "main": "app.js",
+  "author": {
+    "name": "dimitris"
+  },
+  "dependencies": {
+    "folktale": "^2.3.2",
+    "install": "^0.12.2",
+    "monet": "^0.9.0",
+    "node-fetch": "^2.3.0",
+    "pratica": "^1.6.1",
+    "sanctuary": "^2.0.0"
+  }
+}
