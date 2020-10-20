@@ -1,0 +1,1 @@
+export let mapT = f => composite => composite.map(inner => inner.map(f));

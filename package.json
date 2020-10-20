@@ -1,17 +1,23 @@
 {
   "name": "nodejs-console-app1",
   "version": "0.0.0",
-  "description": "NodejsConsoleApp1",
-  "main": "app.js",
+  "description": "code repo for the book: functional Js with categories",
+  "main": "app.mjs",
   "author": {
-    "name": "dimitris"
+    "name": "dimitris papadimitriou"
   },
+  "type": "module",
   "dependencies": {
+    "esm": "^3.2.25",
+    "fluture": "^12.2.0",
     "folktale": "^2.3.2",
     "install": "^0.12.2",
-    "monet": "^0.9.0",
-    "node-fetch": "^2.3.0",
+    "node": "^13.8.0",
+    "node-fetch": "^2.6.0",
     "pratica": "^1.6.1",
+    "ramda": "^0.27.1",
+    "rxjs": "^6.5.4",
+    "rxjs-compat": "^6.6.0",
     "sanctuary": "^2.0.0"
   }
 }
