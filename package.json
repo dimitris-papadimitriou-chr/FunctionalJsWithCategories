@@ -13,7 +13,7 @@
     "folktale": "^2.3.2",
     "install": "^0.12.2",
     "node": "^13.8.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": ">=2.6.1",
     "pratica": "^1.6.1",
     "ramda": "^0.27.1",
     "rxjs": "^6.5.4",
