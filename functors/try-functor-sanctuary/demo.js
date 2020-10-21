@@ -25,7 +25,7 @@ export function demo() {
         //using pipe
         var getClientNameById =
             S.pipe([
-                S.encase(ClientRepository.getById),
+                S.encase(ClientRepository.getById),    //because S.encase(ClientRepository.getById)(id) the id is moved as the lamdba id => outside of S.pipe
                 S.map(S.prop(`name`)),
                 S.either(e => `error : ${e}`)
                         (result => `client name:${result}`)
