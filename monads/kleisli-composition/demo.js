@@ -9,9 +9,9 @@ export function demo() {
         var f1 = x => Id(x * x);
         var f2 = x => Id(2 * x);
 
-        var composition = (f, g) => a => f(a).map(b => g(b)).bind(x => x);
+        var composeK = (f, g) => a => f(a).map(b => g(b)).bind(x => x);
 
-        console.log(composition(f1, f2)(4).getValue()); //32
+        console.log(composeK(f1, f2)(4).getValue()); //32
     }
 
     {
