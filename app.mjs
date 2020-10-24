@@ -1,4 +1,4 @@
  
-import { demo } from './functors/reader-functor/demo.js'
+import { demo } from './monads/promise-maybe-monad-combination-example/demo.js'
 
 demo();
