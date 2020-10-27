@@ -2,7 +2,6 @@ export var State = (expression) => ({
     expression: expression,
     map: f => State(environment => {
         var evaluation = expression(environment);
-        console.log(evaluation)
         return ({ value: f(evaluation.value), state: evaluation.state });
     }),
     bind: f => State(environment => {
