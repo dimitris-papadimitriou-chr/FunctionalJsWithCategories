@@ -1,11 +1,11 @@
 
 import { firstOrNone } from "../../../common/firstOrNone.js"
-import { toPromise } from "../../../common/toPromise.js"
+import { maybeToPromise } from "../../../common/maybeToPromise.js"
 import { Db } from "../../model/Db.js"
 
 export let ClientRepository = ({
     getById: (id) =>
-        toPromise(`no client found`)
+    maybeToPromise(`no client found`)
             (firstOrNone(Db.Clients.filter(client => client.id == id)))
 
 
@@ -13,7 +13,7 @@ export let ClientRepository = ({
 
 export let EmployeeRepository = ({
     getById: (id) =>
-        toPromise(`no employee found`)
+    maybeToPromise(`no employee found`)
             (firstOrNone(Db.Employees.filter(employee => employee.id == id)))
 
 

@@ -1,14 +1,14 @@
-export var State = (expression) => ({
-    expression: expression,
-    map: f => State(environment => {
-        var evaluation = expression(environment);
-        return ({ value: f(evaluation.value), state: evaluation.state });
-    }),
-    bind: f => State(environment => {
-        var evaluation = expression(environment);
-        var previousStateValue = evaluation.value
-        var newState = f(previousStateValue).run(evaluation.state)
-        return newState;
-    }),
-    run: environment => expression(environment),
+export var State = expression => ({
+    map: f =>
+        State(previousState => {
+            var { value, state } = expression(previousState);
+            return { value: f(value), state: state };
+        }),
+    bind: f =>
+        State(previousState => {
+            var { value, state } = expression(previousState);
+            var newState = f(value).run(state);
+            return newState;
+        }),
+    run: previousState => expression(previousState)
 });

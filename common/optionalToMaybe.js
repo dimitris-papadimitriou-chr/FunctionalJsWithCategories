@@ -1,4 +1,4 @@
 import { Some, None } from "../monads/Maybe.js"
 
-export let firstOrNone = value => value ? Some(value) : None();
+export let optionalToMaybe = value => value ? Some(value) : None();
 

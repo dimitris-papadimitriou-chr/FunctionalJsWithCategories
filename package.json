@@ -6,12 +6,17 @@
   "author": {
     "name": "dimitris papadimitriou"
   },
+  "scripts": { 
+    "test": "mocha 'test/**'"
+  },
   "type": "module",
   "dependencies": {
+    "crocks": "^0.12.4",
     "esm": "^3.2.25",
     "fluture": "^13.0.1",
     "folktale": "^2.3.2",
     "install": "^0.13.0",
+    "mocha": "^8.2.0",
     "node": "^15.0.0",
     "node-fetch": ">=2.6.1",
     "pratica": "^2.0.3",
@@ -19,5 +24,6 @@
     "rxjs": "^6.6.3",
     "rxjs-compat": "^6.6.3",
     "sanctuary": "^3.1.0"
-  }
+  },
+  "devDependencies": {}
 }

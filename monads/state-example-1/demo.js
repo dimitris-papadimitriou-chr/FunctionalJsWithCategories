@@ -21,7 +21,7 @@ export function demo() {
 
     // playGame :: String -> State GameState GameValue
 
-    var playGame = x_xs => x_xs.match({
+    var playGame = wordSequence => wordSequence.match({
         empty: () => {
             return State(s => s)
         },//terminates
@@ -30,7 +30,7 @@ export function demo() {
                 if (x == "a" && on)
                     return ({ state: { on: on, counter: counter + 1 } })
                 else if (x == "b" && on)
-                    return ({ state: { on: on, counter: counter + 1 } })
+                    return ({ state: { on: on, counter: counter - 1 } })
                 else if (x == "c")
                     return ({ state: { on: !on, counter: counter } })
                 else return s
