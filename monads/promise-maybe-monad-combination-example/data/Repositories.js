@@ -1,6 +1,6 @@
 
 import { firstOrNone } from "../../../common/firstOrNone.js"
-import { toEither } from "../../../common/toEither.js"
+import { maybeToEither } from "../../../common/maybeToEither.js"
 import fetch from 'node-fetch'
 
 export var ClientRepository = ({

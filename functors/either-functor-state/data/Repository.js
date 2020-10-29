@@ -1,6 +1,6 @@
 
 import { firstOrNone } from "../../../common/firstOrNone.js"
-import { toEither } from "../../../common/toEither.js"
+import { maybeToEither } from "../../../common/maybeToEither.js"
 
 import { State } from "./../../state.js";
 
@@ -14,7 +14,7 @@ export let ClientRepository = {
         })
     })
         .map(firstOrNone)
-        .map(toEither(`no client found`))
+        .map(maybeToEither(`no client found`))
     //.run({ state: Db }).value
     //returns an Either<String,Client>
 

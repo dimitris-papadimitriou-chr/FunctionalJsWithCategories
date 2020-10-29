@@ -12,3 +12,5 @@ export var State = expression => ({
         }),
     run: previousState => expression(previousState)
 });
+
+State.of = v => State((s) => ({ value: v, state: s }));     //pointed functor
